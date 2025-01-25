@@ -39,13 +39,14 @@ class BaseDeDatos:
 def main():
     """
     Función principal que muestra cómo funciona el constructor y destructor.
+    Nombre del ejercicio: "Simulación de conexión a base de datos"
     """
     # Creamos una instancia de la clase BaseDeDatos
     base_datos = BaseDeDatos('mi_base_de_datos')
 
     # Realizamos algunas consultas simuladas
     base_datos.realizar_consulta("SELECT * FROM usuarios;")
-    base_datos.realizar_consulta("INSERT INTO usuarios(nombre, edad) VALUES ('Juan', 30);")
+    base_datos.realizar_consulta("INSERT INTO usuarios(nombre, edad) VALUES ('maycol', 28);")
 
     # Eliminamos el objeto manualmente para invocar el destructor
     del base_datos
