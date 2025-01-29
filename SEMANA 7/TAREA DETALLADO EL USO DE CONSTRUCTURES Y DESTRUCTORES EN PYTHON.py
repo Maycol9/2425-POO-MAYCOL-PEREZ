@@ -1,4 +1,4 @@
-# Ejemplo detallado de uso de constructores (__init__) y destructores (__del__) en Python
+# Tarea detallado de uso de constructores (__init__) y destructores (__del__) en Python
 
 class BaseDeDatos:
     def __init__(self, nombre_bd):
