@@ -1,0 +1,38 @@
+{
+    "P": {
+        "id_producto": "P",
+        "nombre": "PAPAYA",
+        "cantidad": 6,
+        "precio": 0.6
+    },
+    "MO": {
+        "id_producto": "MO",
+        "nombre": "MORA",
+        "cantidad": 70,
+        "precio": 6.0
+    },
+    "M ": {
+        "id_producto": "M ",
+        "nombre": "MANZANA",
+        "cantidad": 50,
+        "precio": 0.6
+    },
+    "PI": {
+        "id_producto": "PI",
+        "nombre": "PITAHAYA",
+        "cantidad": 70,
+        "precio": 0.4
+    },
+    "F": {
+        "id_producto": "F",
+        "nombre": "FREJOL",
+        "cantidad": 60,
+        "precio": 0.55
+    },
+    "PLA": {
+        "id_producto": "PLA",
+        "nombre": "PLATANO",
+        "cantidad": 90,
+        "precio": 0.65
+    }
+}
