@@ -1,38 +1,44 @@
 {
     "P": {
         "id_producto": "P",
-        "nombre": "PAPAYA",
-        "cantidad": 6,
-        "precio": 0.6
-    },
-    "MO": {
-        "id_producto": "MO",
-        "nombre": "MORA",
-        "cantidad": 70,
-        "precio": 6.0
-    },
-    "M ": {
-        "id_producto": "M ",
-        "nombre": "MANZANA",
+        "nombre": "PAPA",
         "cantidad": 50,
-        "precio": 0.6
+        "precio": 0.35
     },
-    "PI": {
-        "id_producto": "PI",
-        "nombre": "PITAHAYA",
-        "cantidad": 70,
+    "PA": {
+        "id_producto": "PA",
+        "nombre": "PAPAYA",
+        "cantidad": 30,
         "precio": 0.4
     },
-    "F": {
-        "id_producto": "F",
-        "nombre": "FREJOL",
-        "cantidad": 60,
+    "M": {
+        "id_producto": "M",
+        "nombre": "MANZANA",
+        "cantidad": 45,
+        "precio": 0.6
+    },
+    "U": {
+        "id_producto": "U",
+        "nombre": "UVA",
+        "cantidad": 80,
         "precio": 0.55
     },
-    "PLA": {
-        "id_producto": "PLA",
-        "nombre": "PLATANO",
-        "cantidad": 90,
-        "precio": 0.65
+    "PE": {
+        "id_producto": "PE",
+        "nombre": "PERA",
+        "cantidad": 70,
+        "precio": 0.35
+    },
+    "N": {
+        "id_producto": "N",
+        "nombre": "NARANJA",
+        "cantidad": 65,
+        "precio": 0.45
+    },
+    "S": {
+        "id_producto": "S",
+        "nombre": "SANDIA",
+        "cantidad": 67,
+        "precio": 0.85
     }
 }

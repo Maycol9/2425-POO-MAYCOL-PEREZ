@@ -1,24 +1,26 @@
 import json
+# Sistema Avanzado de Gestión de Inventario
+# Este programa permite administrar productos en un inventario mediante Programación Orientada a Objetos (POO).
+# Utiliza colecciones como diccionarios para almacenar productos y archivos JSON para persistencia de datos.
 
-# Definición de la clase Producto
 class Producto:
-    # Constructor de la clase Producto con ID, nombre, cantidad y precio
+    # Representa un producto con ID único, nombre, cantidad y precio.
     def __init__(self, id_producto, nombre, cantidad, precio):
         self.id_producto = id_producto
         self.nombre = nombre
         self.cantidad = cantidad
         self.precio = precio
 
-    # Método para actualizar la cantidad de un producto
     def actualizar_cantidad(self, nueva_cantidad):
+        # Método para actualizar la cantidad del producto
         self.cantidad = nueva_cantidad
 
-    # Método para actualizar el precio de un producto
     def actualizar_precio(self, nuevo_precio):
+        # Método para actualizar el precio del producto
         self.precio = nuevo_precio
 
-    # Método para convertir un objeto Producto a un diccionario para su almacenamiento
     def to_dict(self):
+        # Convierte el objeto Producto en un diccionario para su almacenamiento
         return {
             "id_producto": self.id_producto,
             "nombre": self.nombre,
@@ -27,44 +29,44 @@ class Producto:
         }
 
 
-# Definición de la clase Inventario para gestionar los productos
 class Inventario:
+    # Clase que gestiona los productos dentro del inventario
     def __init__(self):
-        self.productos = {}  # Diccionario para almacenar los productos
-        self.cargar_desde_archivo()  # Cargar productos desde un archivo al iniciar
+        self.productos = {}  # Diccionario para almacenar productos por ID
+        self.cargar_desde_archivo()
 
-    # Método para agregar un producto al inventario
     def agregar_producto(self, producto):
+        # Agrega un producto al inventario si no existe
         if producto.id_producto in self.productos:
             print("El producto ya existe en el inventario.")
         else:
             self.productos[producto.id_producto] = producto
-            self.guardar_en_archivo()  # Guardar los cambios en el archivo
+            self.guardar_en_archivo()
             print("Producto agregado con éxito.")
 
-    # Método para eliminar un producto del inventario
     def eliminar_producto(self, id_producto):
+        # Elimina un producto del inventario si existe
         if id_producto in self.productos:
             del self.productos[id_producto]
-            self.guardar_en_archivo()  # Guardar cambios en el archivo
+            self.guardar_en_archivo()
             print("Producto eliminado correctamente.")
         else:
             print("Producto no encontrado.")
 
-    # Método para actualizar la cantidad o el precio de un producto
     def actualizar_producto(self, id_producto, cantidad=None, precio=None):
+        # Actualiza la cantidad o el precio de un producto si existe en el inventario
         if id_producto in self.productos:
             if cantidad is not None:
                 self.productos[id_producto].actualizar_cantidad(cantidad)
             if precio is not None:
                 self.productos[id_producto].actualizar_precio(precio)
-            self.guardar_en_archivo()  # Guardar los cambios en el archivo
+            self.guardar_en_archivo()
             print("Producto actualizado correctamente.")
         else:
             print("Producto no encontrado.")
 
-    # Método para buscar productos por nombre
     def buscar_producto(self, nombre):
+        # Busca productos por nombre y muestra los resultados
         resultados = [prod for prod in self.productos.values() if nombre.lower() in prod.nombre.lower()]
         if resultados:
             for prod in resultados:
@@ -73,8 +75,8 @@ class Inventario:
         else:
             print("No se encontraron productos con ese nombre.")
 
-    # Método para mostrar todos los productos del inventario
     def mostrar_productos(self):
+        # Muestra todos los productos almacenados en el inventario
         if self.productos:
             for prod in self.productos.values():
                 print(
@@ -82,13 +84,13 @@ class Inventario:
         else:
             print("El inventario está vacío.")
 
-    # Método para guardar los productos en un archivo JSON
     def guardar_en_archivo(self):
+        # Guarda el inventario en un archivo JSON para persistencia de datos
         with open("inventario.json", "w") as archivo:
             json.dump({id: prod.to_dict() for id, prod in self.productos.items()}, archivo, indent=4)
 
-    # Método para cargar los productos desde un archivo JSON
     def cargar_desde_archivo(self):
+        # Carga el inventario desde un archivo JSON al iniciar el programa
         try:
             with open("inventario.json", "r") as archivo:
                 datos = json.load(archivo)
@@ -97,8 +99,9 @@ class Inventario:
             self.productos = {}
 
 
-# Función que maneja el menú interactivo en la consola
+# Interfaz de Usuario
 def menu():
+    # Menú interactivo para gestionar el inventario mediante la consola
     inventario = Inventario()
     while True:
         print("\n--- Sistema de Gestión de Inventario ---")
@@ -137,6 +140,5 @@ def menu():
             print("Opción no válida, intente de nuevo.")
 
 
-# Punto de entrada principal del programa
 if __name__ == "__main__":
     menu()
