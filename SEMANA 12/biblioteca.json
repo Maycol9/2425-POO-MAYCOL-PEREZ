@@ -1,0 +1,49 @@
+{
+    "libros": {
+        "0815320965": {
+            "titulo": "Tomas Luis de Victoria ",
+            "autor": "Eugene Casjen Cramer",
+            "categoria": "Novela",
+            "isbn": "0815320965"
+        },
+        "054812958": {
+            "titulo": "Pinocho",
+            "autor": "Carlo Collodi",
+            "categoria": "Literatura Infantil",
+            "isbn": "054812958"
+        },
+        "484616": {
+            "titulo": "Odisea ",
+            "autor": "Homero",
+            "categoria": "Novela",
+            "isbn": "484616"
+        }
+    },
+    "usuarios": {
+        "0001": {
+            "nombre": "Maycol Perez",
+            "user_id": "0001",
+            "prestamos": []
+        },
+        "0002": {
+            "nombre": "David Lopez",
+            "user_id": "0002",
+            "prestamos": []
+        },
+        "0003": {
+            "nombre": "Beatriz Figueroa ",
+            "user_id": "0003",
+            "prestamos": []
+        },
+        "0004": {
+            "nombre": "Andrea Lopez",
+            "user_id": "0004",
+            "prestamos": []
+        },
+        "0005": {
+            "nombre": "Marco Hermosa",
+            "user_id": "0005",
+            "prestamos": []
+        }
+    }
+}
